@@ -1,3 +1,19 @@
+var tel = document.querySelector('#tel');
+
+tel.addEventListener("keyup", function () {
+    
+    if (isNaN(tel.value)) {
+        console.log(tel.value);
+        document.querySelector(".errorTel").innerHTML = "Tel pas valide";
+    }else{
+        document.querySelector(".errorTel").innerHTML = "Tel OK";
+    }
+})
+
+
+
+
+
 function verif() {
     //event.preventDefault();
     var homme = document.querySelector("#mr");
