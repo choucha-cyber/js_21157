@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+/*
+	Démonstration d'une page HTML crée entièrement avec le DOM.
+	Le code source est vide, mais l'inspecteur d'élément
+	affiche les éléments.
+	Bien différencier le code source et le DOM.
+	Lorsqu'on écrit du code source dans une page HTML, le navigateur se charge de le transformer en DOM.
+
+*/
+
+var title = document.getElementsByTagName("title")[0],
+	body = document.body,
+	divCtn = document.createElement("div"),
+	header = document.createElement("header"),
+	nav = document.createElement("nav"),
+	section = document.createElement("section"),
+	h1 = document.createElement("h1"),
+	aside = document.createElement("aside"),
+	image = document.createElement("img"),
+	clear = document.createElement("div"),
+	footer = document.createElement("footer");
+for(var i=1; i<=5; i++) {
+	window['p'+i] = document.createElement("p"); // création de 5 <p>
+}
+for(i=1; i<=4; i++) {
+	window['div'+i] = document.createElement("div"); // création de 4 <div>
+}
+//-------------------------------------------------------------------
+title.textContent = "Création FULL DOM JS"; // remplissage de la balise title
+body.appendChild(header);
+body.appendChild(divCtn);
+body.appendChild(section);
+body.appendChild(aside);
+body.appendChild(footer);
+
+
+header.appendChild(nav);
+divCtn.appendChild(section);
+section.appendChild(h1);
+h1.textContent = "Demo page HTML en FULL DOM JS";
+section.appendChild(div1);
+section.appendChild(div2);
+section.appendChild(div3);
+section.appendChild(clear);
+section.appendChild(image);
+image.src = "imgs/image.jpg";
+
+header.style.backgroundColor = "#34a8e4";
+footer.style.backgroundColor = "#74d0ff";
+nav.style.backgroundColor = "#ea58e5";
+divCtn.style.width = "60%";
+divCtn.style.margin = "0 auto";
+header.style.height = "50px";
+footer.style.height = "50px";
+nav.style.height = "20px";
+
+for(i=1; i<=3; i++) {
+	window["div"+i].style.width = "100px";
+	window["div"+i].style.height = "100px";
+	window["div"+i].style.float = "left";
+	window["div"+i].style.margin = "5px 50px";
+}
+div1.style.backgroundColor = "#00ff72";
+div2.style.backgroundColor = "#ff7800";
+div3.style.backgroundColor = "#00ff72";
+clear.style.clear = "both";
+
+
+</script>
+	</body>
+</html>
