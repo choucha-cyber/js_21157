@@ -9,7 +9,7 @@ function verif() {
         return false;
     }
     
-    if ((document.querySelector('#firstname').value == '') || (document.querySelector('#firstname').value == '') )  {
+    if ((document.querySelector('#firstname').value == '') )  {
         alert('Entrez un nom ');
         document.querySelector('#firstname').focus();
         document.querySelector('#firstname').style.background = "red";
@@ -19,7 +19,7 @@ function verif() {
         document.querySelector('#firstname').style.background = "green";
         document.querySelector('.error').innerHTML = "";
     }
-    if ((document.querySelector('#lastname').value == '') || (document.querySelector('#lastname').value == '') )  {
+    if ((document.querySelector('#lastname').value == '')  )  {
         alert('Entrez un nom ');
         document.querySelector('#lastname').focus();
         document.querySelector('#lastname').style.background = "red";
